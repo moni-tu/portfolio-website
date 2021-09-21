@@ -1,0 +1,272 @@
+/*
+colours used 
+text colour (dark grey): 02040A
+primary colour (dark blue green): 0E57DC
+secondary colour (golden yellow): EAD084
+Check that the contrast works! contrast ration checker
+*/ 
+
+*{
+  box-sizing: border-box;
+}  
+
+body {
+  font-family: 'poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  font-weight: bold;
+}
+        
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+        
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: underline;
+}  
+
+a{
+  color: #0E57DC ;
+}
+
+a:visited {
+  /* visited link*/
+  color: red;
+}
+
+a:hover, a:focus {
+  /*no underlining when hovering over a link*/
+  text-decoration: none;
+  color:  #0E57DC;
+}
+
+a:active {
+  color: aqua;
+
+}
+
+button {
+
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #0E57DC ;
+  color: white;
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+button:hover, button :focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+
+.button_secondary {
+  color: white;
+  background-color: blue;
+}
+
+.navigation-list_item--active {
+  text-decoration: none;
+}
+
+.profile_portrait {
+  float: left;
+  width: 240px;
+  height: 270px;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.page-footer {
+  clear: both;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.Monica-logo {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header_item {
+  flex: 0 1 200px;
+}
+
+.page-header .page-header_item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.project-list_item {
+  background-color: goldenrod;
+  padding: 10px;
+  display: inline-block;
+}
+
+.project-list_item:last-child {
+  grid-column: 3 / 3;
+  grid-row: 1 / 3;
+}
+
+/* the following overwrites the grid settings above. Media queries
+adapt CSS rules for different devices */
+
+@media all and (max-width: 500px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width:750px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}
+
+@media all and (max-width: 750px) {
+  .project-list {
+    grid-gap: 10px;
+  }
+
+  .project-list_item:last-child {
+    grid-column: auto/auto;
+    grid-row: auto/auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/* The words in the button are red and not white, don't know how to fix */
+.button, button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #357b70;
+  color: white;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.about-body {
+  text-align: center;
+  
+}
+
+.hobby-list {
+  list-style-type: none;
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translateX(446px);  
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+
+.cloud-back {
+  animation-duration: 34s;
+  animation-name: cloud-move-reverse;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+
+
