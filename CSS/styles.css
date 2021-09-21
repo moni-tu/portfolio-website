@@ -1,10 +1,29 @@
 /*
 colours used 
 text colour (dark grey): 02040A
-primary colour (dark blue green): 0E57DC
-secondary colour (golden yellow): EAD084
+primary colour (dark blue green): #0E57DC
+secondary colour (golden yellow): #EAD084
 Check that the contrast works! contrast ration checker
 */ 
+
+/* UPDATE: from now on the html files have to refer to style.prodution.css. You have to:
+Copy the content of your CSS file and paste it into the PostCSS playground for converting variables.
+Copy the output of the PostCSS playground and paste it into the autoprefixer.
+Paste the output of the autoprefixer into the style.production.css.
+
+*/
+
+:root {
+  --primary-color: #0E57DC;
+  --secondary-color: #EAD084; 
+  /* the exercise tells me to replace all colors, but does it make sense to replace colors like white and black? 
+  or the red color for a visited website? I am never going to repeat the color red apart from this purpose*/
+}
+
+a {
+  color: var(--primary-color);
+}
+
 
 *{
   box-sizing: border-box;
@@ -36,7 +55,7 @@ h3 {
 }  
 
 a{
-  color: #0E57DC ;
+  color: var (--primary-color) ;
 }
 
 a:visited {
@@ -47,7 +66,7 @@ a:visited {
 a:hover, a:focus {
   /*no underlining when hovering over a link*/
   text-decoration: none;
-  color:  #0E57DC;
+  color:  var (--primary-color);
 }
 
 a:active {
@@ -62,7 +81,7 @@ button {
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: #0E57DC ;
+  background-color: var (--primary-color);
   color: white;
   text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
@@ -148,7 +167,7 @@ button:hover, button :focus {
 }
 
 .project-list_item {
-  background-color: goldenrod;
+  background-color: var (--secondary-color);
   padding: 10px;
   display: inline-block;
 }
@@ -194,7 +213,7 @@ adapt CSS rules for different devices */
   border: none;
   display: inline-block;
   font-family: inherit;
-  background-color: #357b70;
+  background-color: var (--primary-color);
   color: white;
   color: white;
   text-decoration: none;
