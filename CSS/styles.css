@@ -55,7 +55,7 @@ h3 {
 }  
 
 a{
-  color: var (--primary-color) ;
+  color: lighten primary-color, 20%;
 }
 
 a:visited {
@@ -66,23 +66,22 @@ a:visited {
 a:hover, a:focus {
   /*no underlining when hovering over a link*/
   text-decoration: none;
-  color:  var (--primary-color);
+  color:  var(--primary-color);
 }
 
 a:active {
-  color: aqua;
+  color: var(--primary-color-lighter);
 
 }
 
-button {
+.button {
 
   /* overwrites browser defaults and resets the border */
   border: none;
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-  background-color: var (--primary-color);
-  color: white;
+  background-color: var(--primary-color);
   text-decoration: none;
   /*adds spacing to the button (this will be discussed more in-depth later) */
   padding: 10px;
@@ -91,7 +90,7 @@ button {
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-button:hover, button :focus {
+.button:hover, button :focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   /* reduces the opacity of the button to 80% */
@@ -110,9 +109,9 @@ button:hover, button :focus {
 .profile_portrait {
   float: left;
   width: 240px;
-  height: 270px;
-  margin-right: 40px;
-  border-radius: 50%;
+  height: 240px;
+  margin-right: 70px;
+  border-radius: 30%;
 }
 
 .page-footer {
@@ -167,8 +166,9 @@ button:hover, button :focus {
 }
 
 .project-list_item {
-  background-color: var (--secondary-color);
+  background-color: var(--secondary-color);
   padding: 10px;
+  margin: 10px;
   display: inline-block;
 }
 
@@ -213,8 +213,7 @@ adapt CSS rules for different devices */
   border: none;
   display: inline-block;
   font-family: inherit;
-  background-color: var (--primary-color);
-  color: white;
+  background-color: var(--primary-color);
   color: white;
   text-decoration: none;
   padding: 10px;
@@ -229,7 +228,7 @@ button:focus,
 .button:hover,
 .button:focus {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .about-body {
