@@ -320,7 +320,10 @@ button:focus,
 
 .about-body {
   text-align: center;
-  
+}
+
+.contact-body {
+  text-align: center;
 }
 
 .hobby-list {
