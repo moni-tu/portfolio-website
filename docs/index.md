@@ -1,37 +1,73 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
 
-You can use the [editor on GitHub](https://github.com/moni-tu/portfolio-website/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+<html>
+        
+    <head>
+        <meta charset="utf-8">
+        <title>Monica Turani Web Developer Portfolio </title>
+        <link rel="icon" href="Img/Monica_icon.png">
+        <!-- viewport is the user's visible area of a web page-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./css/style.production.css">
+    </head>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    
 
-### Markdown
+    <body>
+        <header class="page-header">
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+            <img src="./Img/Monica-logo.png" alt= "logo" class="Monica-logo">
+        
+            <nav class="page-header_item navigation-list" role="menubar"> 
+                <ul>
+                    <li>
+                        <!-- HTML checker says the following alt element should not be allowed at this point -->
+                        <a href="Index.html" alt= "Home" role="menuitem" class="navigation-list_item navigation-list_item--active"> Home </a>
+                    </li>
+                    
+                    <li role="presentation">
+                        <a href="About.html" role="menuitem" alt= "About" class="navigation-list_item" > About-me </a>     
+                    </li>
 
-```markdown
-Syntax highlighted code block
+                    <li>
+                        <a href="work.html" role="menuitem" alt="my-work" class="navigation-list_item"> My Work </a>
+                    </li>
+        
+                    <li>
+                        <a href="Contact.html" alt= "Contact" class="navigation-list_item"> Contact </a>
+                    </li>
+                </ul>    
+            </nav>
+        </header>
+    
 
-# Header 1
-## Header 2
-### Header 3
+        <div class="profile">
+            <img src="./Img/Monica portrait_icon.jpeg" alt= "Image of me" class="profile_portrait">
+            <h1> Hi Everyone! </h1>
+            <p> My name is Monica and I am a <span>web</span> developer from Italy. I believe that re-inventing oneself and keep learning is the key to a fulfilling life. 
+                I am excited to set on a new journey in my professional life 
+            </p>
+            <a href="#"> Check out some of my code </a>
+        </div>
+        
+        <footer class="page-footer">
+            <p>Find me on </p>
+            <div class="social-media">
+                <!--HTML checker says 30px is a bad value for width and height-->
+                <img src="img/insta_icon.png" alt="Instagram" width="30px" height="30px"> 
+                <img src="img/face_icon.png" alt="Facebook" width="30px" height="30px">
+            </div>
+            
+        </footer> 
 
-- Bulleted
-- List
+    </body>
 
-1. Numbered
-2. List
+    <!-- HTML checker says the following is a stray start tag-->
+    <script src="js/tota11y.min.js"> </script>
+</html>
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/moni-tu/portfolio-website/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
